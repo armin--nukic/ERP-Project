@@ -1,0 +1,20 @@
+{
+  "name": "armin-erp-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "dev": "concurrently \"cd backend && node index.js\" \"cd frontend && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

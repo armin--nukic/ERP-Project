@@ -1,0 +1,36 @@
+node_modules
+node_modules
+
+# Ignoriraj node_modules u oba foldera
+/backend/node_modules/
+/frontend/node_modules/
+
+# Ignoriraj build foldere
+/backend/build/
+/frontend/build/
+
+# Ignoriraj .env datoteke
+/backend/.env
+/frontend/.env
+
+# Ignoriraj log datoteke
+/backend/logs
+/frontend/logs
+*.log
+
+# Ignoriraj sve druge stvari specifične za backend i frontend
+/backend/coverage/
+/frontend/coverage/
+backend/npm-debug.log*
+frontend/npm-debug.log*
+
+# Ignoriraj IDE foldere
+.idea/
+.vscode/
+.vs/
+
+# Ignoriraj sistemske datoteke
+.DS_Store
+Thumbs.db
+
+package-lock.json
