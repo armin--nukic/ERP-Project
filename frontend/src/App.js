@@ -11,9 +11,11 @@ const App = () => {
     fetchItems();
   }, []);
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const fetchItems = async () => {
     try {
-      const response = await fetch("http://localhost:3001/items");
+      const response = await fetch(`${apiUrl}/items`);
       if (!response.ok) {
         throw new Error("Failed to fetch items");
       }
@@ -34,7 +36,7 @@ const App = () => {
 
   const handleAddItem = async (name, description) => {
     try {
-      const response = await fetch("http://localhost:3001/items/new", {
+      const response = await fetch(`${apiUrl}/items/new`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,12 +56,9 @@ const App = () => {
 
   const handleDeleteItem = async (itemId) => {
     try {
-      const response = await fetch(
-        `http://localhost:3001/items/delete/${itemId}`,
-        {
-          method: "DELETE",
-        }
-      );
+      const response = await fetch(`${apiUrl}/items/delete/${itemId}`, {
+        method: "DELETE",
+      });
       if (!response.ok) {
         throw new Error("Failed to delete item");
       }
