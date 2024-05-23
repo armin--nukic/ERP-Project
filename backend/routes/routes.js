@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
-const Item = require("../models/Item."); // Pretpostavljajući da je model definiran u 'Item.js'
+const Item = require("../models/Item"); // Pretpostavljajući da je model definiran u 'Item.js'
 
 // GET ruta za dohvaćanje svih stavki
 router.get("/items", async (req, res) => {
