@@ -10,8 +10,8 @@ const AddItemModal = ({ onClose, onAddItem }) => {
   };
 
   return (
-    <div className="modal">
-      <div className="modal-content">
+    <div className="modal" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>Add New Item</h2>
           <button className="close" onClick={onClose}>
