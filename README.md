@@ -56,6 +56,7 @@ To run the application, follow these steps:
 ## Start the frontend server
 # cd ../frontend
 # npm start
+# Open your browser and navigate to http://localhost:3000 to use the application.
+
 ```
 
-# Open your browser and navigate to http://localhost:3000 to use the application.
