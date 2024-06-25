@@ -29,14 +29,19 @@ cd ERP-Project
 cd backend
 npm install
 
+# Create a .env file in the backend directory and add the following:
+# Replace `your_mongodb_atlas_uri` with your actual MongoDB Atlas URI and set the PORT
+echo "MONGODB_URI=your_mongodb_atlas_uri
+PORT=3001" > .env
+
 # Install dependencies for the frontend
 cd ../frontend
 npm install
 
-# Set up environment variables
-# Create a .env file in the backend directory and add the following:
-# MONGO_URI=your_mongodb_atlas_uri
-# JWT_SECRET=your_jwt_secret
+# Create a .env file in the frontend directory and add the following:
+# Set REACT_APP_API_URL to connect to your backend API
+echo "REACT_APP_API_URL=http://localhost:3001" > .env
+
 ```
 
 ## Running the Application
@@ -48,7 +53,7 @@ To run the application, follow these steps:
 # cd backend
 # node index.js
 
-# Start the frontend server
+## Start the frontend server
 # cd ../frontend
 # npm start
 ```
